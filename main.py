@@ -58,10 +58,37 @@ def save_transition_table(scanner, output_path):
             )
 
 
+def request_input_file():
+    while True:
+        input_path = input("Ingresa la ruta del archivo .c a analizar: ").strip()
+
+        # Esto quita comillas si el usuario arrastra el archivo a la terminal
+        input_path = input_path.strip('"').strip("'")
+
+        if not input_path:
+            print("No ingresaste ninguna ruta. Intenta otra vez.\n")
+            continue
+
+        if not os.path.isfile(input_path):
+            print("El archivo no existe. Verifica la ruta e intenta otra vez.\n")
+            continue
+
+        if not input_path.lower().endswith(".c"):
+            answer = input("El archivo no termina en .c. ¿Deseas analizarlo de todos modos? (s/n): ")
+            if answer.lower() != "s":
+                continue
+
+        return input_path
+
+
 def main():
     os.makedirs("output", exist_ok=True)
 
-    input_path = "input/ejemplo.c"
+    print("==============================================")
+    print(" DFA - Detector de palabras reservadas ANSI C ")
+    print("==============================================\n")
+
+    input_path = request_input_file()
 
     scanner = PureDFAScanner()
     found_keywords, history = scanner.scan_file(input_path)
@@ -70,9 +97,10 @@ def main():
     save_history(history, "output/historial.txt")
     save_transition_table(scanner, "output/tabla_transiciones.txt")
 
-    print("Analisis terminado.")
+    print("\nAnalisis terminado.")
+    print(f"Archivo analizado: {input_path}")
     print(f"Palabras reservadas encontradas: {len(found_keywords)}")
-    print("Archivos generados:")
+    print("\nArchivos generados:")
     print("- output/palabras_encontradas.txt")
     print("- output/historial.txt")
     print("- output/tabla_transiciones.txt")
