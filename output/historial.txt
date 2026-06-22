@@ -1,0 +1,115 @@
+HISTORIAL DEL DFA
+==================================================
+
+Token evaluado: include
+Linea: 1, Columna: 2
+  Lee 'i': q0 -> q61
+  Lee 'n': q61 -> q63
+  Lee 'c': q63 -> q_dead
+Estado final: q_dead
+Resultado: NO ES PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: stdio
+Linea: 1, Columna: 11
+  Lee 's': q0 -> q81
+  Lee 't': q81 -> q95
+  Lee 'd': q95 -> q_dead
+Estado final: q_dead
+Resultado: NO ES PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: h
+Linea: 1, Columna: 17
+  Lee 'h': q0 -> q_dead
+Estado final: q_dead
+Resultado: NO ES PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: int
+Linea: 3, Columna: 1
+  Lee 'i': q0 -> q61
+  Lee 'n': q61 -> q63
+  Lee 't': q63 -> q64
+Estado final: q64
+Resultado: PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: main
+Linea: 3, Columna: 5
+  Lee 'm': q0 -> q_dead
+Estado final: q_dead
+Resultado: NO ES PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: int
+Linea: 4, Columna: 5
+  Lee 'i': q0 -> q61
+  Lee 'n': q61 -> q63
+  Lee 't': q63 -> q64
+Estado final: q64
+Resultado: PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: edad
+Linea: 4, Columna: 9
+  Lee 'e': q0 -> q38
+  Lee 'd': q38 -> q_dead
+Estado final: q_dead
+Resultado: NO ES PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: float
+Linea: 5, Columna: 5
+  Lee 'f': q0 -> q50
+  Lee 'l': q50 -> q51
+  Lee 'o': q51 -> q52
+  Lee 'a': q52 -> q53
+  Lee 't': q53 -> q54
+Estado final: q54
+Resultado: PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: promedio
+Linea: 5, Columna: 11
+  Lee 'p': q0 -> q_dead
+Estado final: q_dead
+Resultado: NO ES PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: if
+Linea: 7, Columna: 5
+  Lee 'i': q0 -> q61
+  Lee 'f': q61 -> q62
+Estado final: q62
+Resultado: PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: edad
+Linea: 7, Columna: 9
+  Lee 'e': q0 -> q38
+  Lee 'd': q38 -> q_dead
+Estado final: q_dead
+Resultado: NO ES PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: return
+Linea: 8, Columna: 9
+  Lee 'r': q0 -> q69
+  Lee 'e': q69 -> q70
+  Lee 't': q70 -> q77
+  Lee 'u': q77 -> q78
+  Lee 'r': q78 -> q79
+  Lee 'n': q79 -> q80
+Estado final: q80
+Resultado: PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: else
+Linea: 9, Columna: 7
+  Lee 'e': q0 -> q38
+  Lee 'l': q38 -> q39
+  Lee 's': q39 -> q40
+  Lee 'e': q40 -> q41
+Estado final: q41
+Resultado: PALABRA RESERVADA
+--------------------------------------------------
+Token evaluado: return
+Linea: 10, Columna: 9
+  Lee 'r': q0 -> q69
+  Lee 'e': q69 -> q70
+  Lee 't': q70 -> q77
+  Lee 'u': q77 -> q78
+  Lee 'r': q78 -> q79
+  Lee 'n': q79 -> q80
+Estado final: q80
+Resultado: PALABRA RESERVADA
+--------------------------------------------------
