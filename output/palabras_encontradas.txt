@@ -3,12 +3,23 @@ PALABRAS RESERVADAS ANSI C ENCONTRADAS
 
 No.     Palabra             Linea       Columna     Estado final   
 ---------------------------------------------------------------------------
-1       int                 3           1           q64            
-2       int                 4           5           q64            
-3       float               5           5           q54            
-4       char                6           5           q16            
-5       if                  8           5           q62            
-6       return              9           9           q80            
-7       else                10          7           q41            
-8       while               11          9           q141           
-9       return              15          9           q80            
+1       struct              6           1           q103           
+2       char                7           5           q16            
+3       int                 8           5           q64            
+4       float               9           5           q54            
+5       int                 12          1           q64            
+6       int                 13          5           q64            
+7       float               14          5           q54            
+8       char                15          5           q16            
+9       struct              17          5           q103           
+10      while               19          5           q141           
+11      if                  26          9           q62            
+12      else                28          11          q41            
+13      for                 39          5           q56            
+14      int                 39          10          q64            
+15      switch              43          5           q108           
+16      case                44          9           q13            
+17      break               46          13          q9             
+18      default             48          9           q32            
+19      break               50          13          q9             
+20      return              53          5           q80            
