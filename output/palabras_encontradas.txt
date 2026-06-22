@@ -1,12 +1,12 @@
 PALABRAS RESERVADAS ANSI C ENCONTRADAS
-==================================================
+============================================================
 
-No.  Palabra        Linea     Columna   
---------------------------------------------------
-1    int            3         1         
-2    int            4         5         
-3    float          5         5         
-4    if             7         5         
-5    return         8         9         
-6    else           9         7         
-7    return         10        9         
+No.     Palabra             Linea       Columna     Estado final   
+------------------------------------------------------------
+1       int                 3           1           q64            
+2       int                 4           5           q64            
+3       float               5           5           q54            
+4       if                  7           5           q62            
+5       return              8           9           q80            
+6       else                9           7           q41            
+7       return              10          9           q80            

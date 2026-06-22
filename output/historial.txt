@@ -1,115 +1,114 @@
-HISTORIAL DEL DFA
-==================================================
+HISTORIAL COMPLETO DEL AUTOMATA
+======================================================================
 
-Token evaluado: include
-Linea: 1, Columna: 2
-  Lee 'i': q0 -> q61
-  Lee 'n': q61 -> q63
-  Lee 'c': q63 -> q_dead
-Estado final: q_dead
-Resultado: NO ES PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: stdio
-Linea: 1, Columna: 11
-  Lee 's': q0 -> q81
-  Lee 't': q81 -> q95
-  Lee 'd': q95 -> q_dead
-Estado final: q_dead
-Resultado: NO ES PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: h
-Linea: 1, Columna: 17
-  Lee 'h': q0 -> q_dead
-Estado final: q_dead
-Resultado: NO ES PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: int
-Linea: 3, Columna: 1
-  Lee 'i': q0 -> q61
-  Lee 'n': q61 -> q63
-  Lee 't': q63 -> q64
-Estado final: q64
-Resultado: PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: main
-Linea: 3, Columna: 5
-  Lee 'm': q0 -> q_dead
-Estado final: q_dead
-Resultado: NO ES PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: int
-Linea: 4, Columna: 5
-  Lee 'i': q0 -> q61
-  Lee 'n': q61 -> q63
-  Lee 't': q63 -> q64
-Estado final: q64
-Resultado: PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: edad
-Linea: 4, Columna: 9
-  Lee 'e': q0 -> q38
-  Lee 'd': q38 -> q_dead
-Estado final: q_dead
-Resultado: NO ES PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: float
-Linea: 5, Columna: 5
-  Lee 'f': q0 -> q50
-  Lee 'l': q50 -> q51
-  Lee 'o': q51 -> q52
-  Lee 'a': q52 -> q53
-  Lee 't': q53 -> q54
-Estado final: q54
-Resultado: PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: promedio
-Linea: 5, Columna: 11
-  Lee 'p': q0 -> q_dead
-Estado final: q_dead
-Resultado: NO ES PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: if
-Linea: 7, Columna: 5
-  Lee 'i': q0 -> q61
-  Lee 'f': q61 -> q62
-Estado final: q62
-Resultado: PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: edad
-Linea: 7, Columna: 9
-  Lee 'e': q0 -> q38
-  Lee 'd': q38 -> q_dead
-Estado final: q_dead
-Resultado: NO ES PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: return
-Linea: 8, Columna: 9
-  Lee 'r': q0 -> q69
-  Lee 'e': q69 -> q70
-  Lee 't': q70 -> q77
-  Lee 'u': q77 -> q78
-  Lee 'r': q78 -> q79
-  Lee 'n': q79 -> q80
-Estado final: q80
-Resultado: PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: else
-Linea: 9, Columna: 7
-  Lee 'e': q0 -> q38
-  Lee 'l': q38 -> q39
-  Lee 's': q39 -> q40
-  Lee 'e': q40 -> q41
-Estado final: q41
-Resultado: PALABRA RESERVADA
---------------------------------------------------
-Token evaluado: return
-Linea: 10, Columna: 9
-  Lee 'r': q0 -> q69
-  Lee 'e': q69 -> q70
-  Lee 't': q70 -> q77
-  Lee 'u': q77 -> q78
-  Lee 'r': q78 -> q79
-  Lee 'n': q79 -> q80
-Estado final: q80
-Resultado: PALABRA RESERVADA
---------------------------------------------------
+Linea 1, Columna 1 | Token parcial: '#' | Lee: '#' | q0 -> q_dead
+Linea 1, Columna 2 | Token parcial: '#i' | Lee: 'i' | q_dead -> q_dead
+Linea 1, Columna 3 | Token parcial: '#in' | Lee: 'n' | q_dead -> q_dead
+Linea 1, Columna 4 | Token parcial: '#inc' | Lee: 'c' | q_dead -> q_dead
+Linea 1, Columna 5 | Token parcial: '#incl' | Lee: 'l' | q_dead -> q_dead
+Linea 1, Columna 6 | Token parcial: '#inclu' | Lee: 'u' | q_dead -> q_dead
+Linea 1, Columna 7 | Token parcial: '#includ' | Lee: 'd' | q_dead -> q_dead
+Linea 1, Columna 8 | Token parcial: '#include' | Lee: 'e' | q_dead -> q_dead
+Fin de token '#include' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 1, Columna 11 | Token parcial: 's' | Lee: 's' | q0 -> q81
+Linea 1, Columna 12 | Token parcial: 'st' | Lee: 't' | q81 -> q95
+Linea 1, Columna 13 | Token parcial: 'std' | Lee: 'd' | q95 -> q_dead
+Linea 1, Columna 14 | Token parcial: 'stdi' | Lee: 'i' | q_dead -> q_dead
+Linea 1, Columna 15 | Token parcial: 'stdio' | Lee: 'o' | q_dead -> q_dead
+Fin de token 'stdio' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 1, Columna 17 | Token parcial: 'h' | Lee: 'h' | q0 -> q_dead
+Fin de token 'h' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 3, Columna 1 | Token parcial: 'i' | Lee: 'i' | q0 -> q61
+Linea 3, Columna 2 | Token parcial: 'in' | Lee: 'n' | q61 -> q63
+Linea 3, Columna 3 | Token parcial: 'int' | Lee: 't' | q63 -> q64
+Fin de token 'int' | Estado final: q64 | Regresa a: q0
+----------------------------------------------------------------------
+Linea 3, Columna 5 | Token parcial: 'm' | Lee: 'm' | q0 -> q_dead
+Linea 3, Columna 6 | Token parcial: 'ma' | Lee: 'a' | q_dead -> q_dead
+Linea 3, Columna 7 | Token parcial: 'mai' | Lee: 'i' | q_dead -> q_dead
+Linea 3, Columna 8 | Token parcial: 'main' | Lee: 'n' | q_dead -> q_dead
+Fin de token 'main' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 4, Columna 5 | Token parcial: 'i' | Lee: 'i' | q0 -> q61
+Linea 4, Columna 6 | Token parcial: 'in' | Lee: 'n' | q61 -> q63
+Linea 4, Columna 7 | Token parcial: 'int' | Lee: 't' | q63 -> q64
+Fin de token 'int' | Estado final: q64 | Regresa a: q0
+----------------------------------------------------------------------
+Linea 4, Columna 9 | Token parcial: 'e' | Lee: 'e' | q0 -> q38
+Linea 4, Columna 10 | Token parcial: 'ed' | Lee: 'd' | q38 -> q_dead
+Linea 4, Columna 11 | Token parcial: 'eda' | Lee: 'a' | q_dead -> q_dead
+Linea 4, Columna 12 | Token parcial: 'edad' | Lee: 'd' | q_dead -> q_dead
+Fin de token 'edad' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 4, Columna 16 | Token parcial: '2' | Lee: '2' | q0 -> q_dead
+Linea 4, Columna 17 | Token parcial: '20' | Lee: '0' | q_dead -> q_dead
+Fin de token '20' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 5, Columna 5 | Token parcial: 'f' | Lee: 'f' | q0 -> q50
+Linea 5, Columna 6 | Token parcial: 'fl' | Lee: 'l' | q50 -> q51
+Linea 5, Columna 7 | Token parcial: 'flo' | Lee: 'o' | q51 -> q52
+Linea 5, Columna 8 | Token parcial: 'floa' | Lee: 'a' | q52 -> q53
+Linea 5, Columna 9 | Token parcial: 'float' | Lee: 't' | q53 -> q54
+Fin de token 'float' | Estado final: q54 | Regresa a: q0
+----------------------------------------------------------------------
+Linea 5, Columna 11 | Token parcial: 'p' | Lee: 'p' | q0 -> q_dead
+Linea 5, Columna 12 | Token parcial: 'pr' | Lee: 'r' | q_dead -> q_dead
+Linea 5, Columna 13 | Token parcial: 'pro' | Lee: 'o' | q_dead -> q_dead
+Linea 5, Columna 14 | Token parcial: 'prom' | Lee: 'm' | q_dead -> q_dead
+Linea 5, Columna 15 | Token parcial: 'prome' | Lee: 'e' | q_dead -> q_dead
+Linea 5, Columna 16 | Token parcial: 'promed' | Lee: 'd' | q_dead -> q_dead
+Linea 5, Columna 17 | Token parcial: 'promedi' | Lee: 'i' | q_dead -> q_dead
+Linea 5, Columna 18 | Token parcial: 'promedio' | Lee: 'o' | q_dead -> q_dead
+Fin de token 'promedio' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 5, Columna 22 | Token parcial: '9' | Lee: '9' | q0 -> q_dead
+Fin de token '9' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 5, Columna 24 | Token parcial: '5' | Lee: '5' | q0 -> q_dead
+Fin de token '5' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 7, Columna 5 | Token parcial: 'i' | Lee: 'i' | q0 -> q61
+Linea 7, Columna 6 | Token parcial: 'if' | Lee: 'f' | q61 -> q62
+Fin de token 'if' | Estado final: q62 | Regresa a: q0
+----------------------------------------------------------------------
+Linea 7, Columna 9 | Token parcial: 'e' | Lee: 'e' | q0 -> q38
+Linea 7, Columna 10 | Token parcial: 'ed' | Lee: 'd' | q38 -> q_dead
+Linea 7, Columna 11 | Token parcial: 'eda' | Lee: 'a' | q_dead -> q_dead
+Linea 7, Columna 12 | Token parcial: 'edad' | Lee: 'd' | q_dead -> q_dead
+Fin de token 'edad' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 7, Columna 17 | Token parcial: '1' | Lee: '1' | q0 -> q_dead
+Linea 7, Columna 18 | Token parcial: '18' | Lee: '8' | q_dead -> q_dead
+Fin de token '18' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 8, Columna 9 | Token parcial: 'r' | Lee: 'r' | q0 -> q69
+Linea 8, Columna 10 | Token parcial: 're' | Lee: 'e' | q69 -> q70
+Linea 8, Columna 11 | Token parcial: 'ret' | Lee: 't' | q70 -> q77
+Linea 8, Columna 12 | Token parcial: 'retu' | Lee: 'u' | q77 -> q78
+Linea 8, Columna 13 | Token parcial: 'retur' | Lee: 'r' | q78 -> q79
+Linea 8, Columna 14 | Token parcial: 'return' | Lee: 'n' | q79 -> q80
+Fin de token 'return' | Estado final: q80 | Regresa a: q0
+----------------------------------------------------------------------
+Linea 8, Columna 16 | Token parcial: '1' | Lee: '1' | q0 -> q_dead
+Fin de token '1' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------
+Linea 9, Columna 7 | Token parcial: 'e' | Lee: 'e' | q0 -> q38
+Linea 9, Columna 8 | Token parcial: 'el' | Lee: 'l' | q38 -> q39
+Linea 9, Columna 9 | Token parcial: 'els' | Lee: 's' | q39 -> q40
+Linea 9, Columna 10 | Token parcial: 'else' | Lee: 'e' | q40 -> q41
+Fin de token 'else' | Estado final: q41 | Regresa a: q0
+----------------------------------------------------------------------
+Linea 10, Columna 9 | Token parcial: 'r' | Lee: 'r' | q0 -> q69
+Linea 10, Columna 10 | Token parcial: 're' | Lee: 'e' | q69 -> q70
+Linea 10, Columna 11 | Token parcial: 'ret' | Lee: 't' | q70 -> q77
+Linea 10, Columna 12 | Token parcial: 'retu' | Lee: 'u' | q77 -> q78
+Linea 10, Columna 13 | Token parcial: 'retur' | Lee: 'r' | q78 -> q79
+Linea 10, Columna 14 | Token parcial: 'return' | Lee: 'n' | q79 -> q80
+Fin de token 'return' | Estado final: q80 | Regresa a: q0
+----------------------------------------------------------------------
+Linea 10, Columna 16 | Token parcial: '0' | Lee: '0' | q0 -> q_dead
+Fin de token '0' | Estado final: q_dead | Regresa a: q0
+----------------------------------------------------------------------

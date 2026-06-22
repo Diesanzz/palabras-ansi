@@ -1,46 +1,74 @@
-from src.keywords import RESERVED_WORDS
-from src.dfa import DFA
-from src.lexer import extract_tokens_with_positions
-from src.report_generator import (
-    save_found_keywords,
-    save_history,
-    save_transition_table
-)
+from src.scanner import PureDFAScanner
+
+
+def save_found_keywords(found_keywords, output_path):
+    with open(output_path, "w", encoding="utf-8") as file:
+        file.write("PALABRAS RESERVADAS ANSI C ENCONTRADAS\n")
+        file.write("=" * 60 + "\n\n")
+        file.write(f"{'No.':<8}{'Palabra':<20}{'Linea':<12}{'Columna':<12}{'Estado final':<15}\n")
+        file.write("-" * 60 + "\n")
+
+        for i, item in enumerate(found_keywords, start=1):
+            file.write(
+                f"{i:<8}{item['word']:<20}{item['line']:<12}"
+                f"{item['column']:<12}{item['final_state']:<15}\n"
+            )
+
+
+def save_history(history, output_path):
+    with open(output_path, "w", encoding="utf-8") as file:
+        file.write("HISTORIAL COMPLETO DEL AUTOMATA\n")
+        file.write("=" * 70 + "\n\n")
+
+        for step in history:
+            if step.get("closed"):
+                file.write(
+                    f"Fin de token '{step['token']}' | "
+                    f"Estado final: {step['from']} | "
+                    f"Regresa a: {step['to']}\n"
+                )
+                file.write("-" * 70 + "\n")
+            else:
+                file.write(
+                    f"Linea {step['line']}, Columna {step['column']} | "
+                    f"Token parcial: '{step['token']}' | "
+                    f"Lee: '{step['char']}' | "
+                    f"{step['from']} -> {step['to']}\n"
+                )
+
+
+def save_transition_table(scanner, output_path):
+    rows = scanner.get_transition_table()
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        file.write("TABLA DE TRANSICIONES DEL DFA\n")
+        file.write("=" * 60 + "\n\n")
+        file.write(f"{'Estado':<15}{'Simbolo':<15}{'Siguiente estado':<20}\n")
+        file.write("-" * 60 + "\n")
+
+        for row in rows:
+            file.write(
+                f"{row['state']:<15}{row['symbol']:<15}{row['next_state']:<20}\n"
+            )
 
 
 def main():
     input_path = "input/ejemplo.c"
 
-    with open(input_path, "r", encoding="utf-8") as file:
-        source_code = file.read()
+    scanner = PureDFAScanner()
 
-    dfa = DFA(RESERVED_WORDS)
-    tokens = extract_tokens_with_positions(source_code)
-
-    all_evaluations = []
-    found_keywords = []
-
-    for token_data in tokens:
-        evaluation = dfa.evaluate(token_data["token"])
-
-        complete_result = {
-            **token_data,
-            **evaluation
-        }
-
-        all_evaluations.append(complete_result)
-
-        if evaluation["is_reserved"]:
-            found_keywords.append(complete_result)
+    found_keywords, history = scanner.scan_file(input_path)
 
     save_found_keywords(found_keywords, "output/palabras_encontradas.txt")
-    save_history(all_evaluations, "output/historial.txt")
-    save_transition_table(dfa, "output/tabla_transiciones.txt")
+    save_history(history, "output/historial.txt")
+    save_transition_table(scanner, "output/tabla_transiciones.txt")
 
     print("Analisis terminado.")
-    print(f"Tokens evaluados: {len(all_evaluations)}")
     print(f"Palabras reservadas encontradas: {len(found_keywords)}")
-    print("Archivos generados en la carpeta output/")
+    print("Archivos generados:")
+    print("- output/palabras_encontradas.txt")
+    print("- output/historial.txt")
+    print("- output/tabla_transiciones.txt")
 
 
 if __name__ == "__main__":
